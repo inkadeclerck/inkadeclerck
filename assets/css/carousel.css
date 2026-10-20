@@ -22,3 +22,24 @@
     height: auto;
   }
 }
+
+.activity-story > .activity-carousel {
+  width: 420px !important;
+  height: 520px !important;
+  aspect-ratio: auto !important;
+  flex-shrink: 0;
+  align-self: center;
+  overflow: hidden;
+}
+
+.activity-carousel > .gallery-photo {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.activity-carousel > .gallery-photo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}

@@ -20,24 +20,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-// Elke activiteit toont één foto tegelijk, met een wissel om de 3 seconden.
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".activity-carousel").forEach((carousel) => {
-    const slides = Array.from(carousel.querySelectorAll(".gallery-photo"));
-    if (!slides.length) return;
-    let current = 0;
-    slides.forEach((slide, index) => {
-      slide.classList.toggle("is-active", index === 0);
-      slide.setAttribute("aria-hidden", String(index !== 0));
-    });
-    if (slides.length < 2) return;
-    window.setInterval(() => {
-      slides[current].classList.remove("is-active");
-      slides[current].setAttribute("aria-hidden", "true");
-      current = (current + 1) % slides.length;
-      slides[current].classList.add("is-active");
-      slides[current].setAttribute("aria-hidden", "false");
-    }, 3000);
-  });
-});

@@ -15,7 +15,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink-deep); background: var(--paper); font-family: var(--sans); font-size: 16px; line-height: 1.75; }
 a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.site-header { height: 86px; padding: 0 6.5%; display: flex; align-items: center; justify-content: space-between; gap: 28px; background: var(--paper); position: relative; z-index: 10; }
+.site-header { height: 86px; padding: 0 2.5%; display: flex; align-items: center; justify-content: space-between; gap: 28px; background: var(--paper); position: relative; z-index: 10; }
 .brand, .footer-brand { font-family: var(--serif); font-size: 1.55rem; font-weight: 500; letter-spacing: -.035em; white-space: nowrap; }
 .main-nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 42px); }
 .main-nav a { color: #65554c; font-size: .88rem; transition: color .2s ease; position: relative; }

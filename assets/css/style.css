@@ -1,7 +1,7 @@
 /* Inka Declerck portfolio — pas kleuren en typografie hieronder eenvoudig aan. */
 :root {
-  --ink: #2e5440;
-  --ink-deep: #2e5440;
+  --ink: #4b3933;
+  --ink-deep: #352721;
   --sand: #e9dfd2;
   --sand-light: #f5f0e9;
   --paper: #fffdf9;
@@ -131,3 +131,29 @@ h2 { font-size: clamp(2.1rem, 4vw, 3.25rem); margin: 0 0 24px; }
   .intro-image-frame { height: 300px; }
   .large-photo { height: 350px; }
 }
+
+
+/* Activiteitendetailpagina's: responsieve tekst- en fotolay-out */
+.activity-meta { display:flex; flex-wrap:wrap; gap:10px 24px; margin:0 0 24px; color:var(--muted); font-size:.82rem; }
+.activity-meta span { display:inline-flex; align-items:center; gap:7px; }
+.activity-detail-page { padding-top:clamp(48px,7vw,90px); padding-bottom:clamp(70px,9vw,120px); }
+.activity-detail-heading { max-width:820px; margin:0 auto 42px; }
+.activity-detail-heading h2 { margin-bottom:20px; }
+.activity-story { display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,.82fr); gap:clamp(34px,6vw,84px); align-items:start; }
+.activity-story-copy { min-width:0; }
+.activity-story-copy h3 { font-size:1.55rem; margin:32px 0 12px; }
+.activity-story-copy p { margin:0 0 17px; }
+.activity-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; align-content:start; }
+.activity-gallery.gallery-one { grid-template-columns:1fr; }
+.activity-gallery.gallery-three .gallery-photo:first-child { grid-column:1 / -1; }
+.gallery-photo { display:block; position:relative; overflow:hidden; min-height:150px; aspect-ratio:4 / 3; background:var(--sand-light); }
+.gallery-photo img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .45s ease; }
+.gallery-photo:hover img { transform:scale(1.035); }
+.gallery-photo figcaption { position:absolute; inset:auto 0 0; padding:24px 13px 10px; color:white; font-size:.72rem; background:linear-gradient(transparent,rgba(40,29,24,.62)); }
+.photo-placeholder { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; min-height:190px; padding:20px; text-align:center; color:#85766c; background:linear-gradient(135deg,#f3ece3,#e5d8ca); }
+.photo-placeholder strong { font-family:var(--serif); font-size:1.15rem; font-weight:500; }
+.photo-placeholder span { font-size:.72rem; }
+.activity-end-links { display:flex; flex-wrap:wrap; justify-content:space-between; gap:18px; margin-top:48px; padding-top:24px; border-top:1px solid var(--line); }
+.activity-end-links a { font-size:.86rem; color:var(--ink); }
+@media (max-width:760px) { .activity-story { grid-template-columns:1fr; } .activity-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); } .activity-detail-heading { margin-bottom:30px; } .gallery-photo { min-height:125px; } }
+@media (max-width:430px) { .activity-gallery { gap:8px; } .gallery-photo { min-height:110px; } .photo-placeholder { padding:12px; } }
